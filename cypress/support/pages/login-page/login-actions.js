@@ -35,6 +35,14 @@ class loginPage {
         cy.xpath(locators.datatest.welcomeUser).should('be.visible');
     }
 
+    clearFormUsername() {
+        cy.xpath(locators.datatest.formFillUsername).clear();
+    }
+
+    clearFormPassword() {
+        cy.xpath(locators.datatest.formFillPassword).clear();
+    }
+
 }
 
 module.exports = new loginPage();

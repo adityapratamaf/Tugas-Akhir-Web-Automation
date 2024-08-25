@@ -41,6 +41,19 @@ describe("login", () => {
             cy.on('window:alert', (t) => {
                 expect(t).to.contains('User does not exist.');
             })
+        }),
+
+        it("with empty data", () => {
+            loginPage.goToHomePage()
+            loginPage.verifyHomePageAppears()
+            loginPage.clickLoginMenu()
+            loginPage.verifyModalLoginPageAppears()
+            loginPage.clearFormUsername()
+            loginPage.clearFormPassword()
+            loginPage.clickLoginButton()
+            cy.on('window:alert', (t) => {
+                expect(t).to.contains('Please fill out Username and Password.');
+            })
         })
 
 })
