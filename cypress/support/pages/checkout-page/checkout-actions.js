@@ -2,6 +2,14 @@ const locators = require('../checkout-page/checkout-locators')
 
 class checkoutPage {
 
+    goToHomePage() {
+        cy.visit('https://demoblaze.com/');
+    }
+
+    verifyHomePageAppears() {
+        cy.xpath(locators.datatest.imageWebsiteLogo).should('be.visible');
+    }
+
     clickChooseProduct() {
         cy.xpath(locators.datatest.chooseProductCategory).click();
     }

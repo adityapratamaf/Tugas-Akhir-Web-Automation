@@ -6,6 +6,7 @@ const {
 module.exports = {
 
     datatest: {
+        imageWebsiteLogo: '//*[@id="nava"]',
         chooseProductCategory: '//*[@onclick="byCat(\'phone\')"]',
         pageProductAppears: '//*[@id="prev2"]',
         chooseItemProduct: '//a[@href="prod.html?idp_=3" and contains(@class, "hrefch")]',
